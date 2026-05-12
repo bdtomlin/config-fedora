@@ -1,0 +1,20 @@
+[manager]
+show_hidden = false
+
+[opener]
+play = [
+	{ run = 'mpv "$@"', orphan = true, for = "unix" }
+]
+edit = [
+	{ run = 'nvim "$@"', block = true, for = "unix" }
+]
+open = [
+	{ run = 'xdg-open "$@"', orphan = true, desc = "Open" }
+]
+reveal = [
+  { run = 'nautilus -w "$@"', orphan = true, desc = "Reveal", for = "linux"}
+]
+append_rules = [
+	{ name = "*.jpg", orphan = true, run = 'loupe "$@"' },
+	# { name = "*.html", use = [ "open", "edit" ] }
+]

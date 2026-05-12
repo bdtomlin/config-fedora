@@ -1,0 +1,21 @@
+{
+  "name": "Kanagawa",
+  "primary": "#ECBE8A",
+  "primaryText": "#191815",
+  "primaryContainer": "#775850",
+  "secondary": "#f6c177",
+  "surface": "#181616",
+  "surfaceText": "#a5a49b",
+  "surfaceVariant": "#353533",
+  "surfaceVariantText": "#7a7971",
+  "surfaceTint": "#c4a7e7",
+  "background": "#191724",
+  "backgroundText": "#524f67",
+  "outline": "#60605d",
+  "surfaceContainer": "#181616",
+  "surfaceText": "#a5a49b",
+  "surfaceContainerHigh": "#282525",
+  "error": "#FF5D62",
+  "warning": "#FFA066",
+  "info": "#7FB4CA"
+}

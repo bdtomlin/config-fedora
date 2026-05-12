@@ -1,0 +1,140 @@
+(defcfg
+  ;;linux-dev /dev/input/by-path/platform-i8042-serio-0-event-kbd
+  concurrent-tap-hold true
+  allow-hardware-repeat false
+  chords-v2-min-idle 50
+  process-unmapped-keys no
+)
+
+(defchordsv2
+  (f d) esc 40 all-released  ()
+  (j k) ent 40 all-released ()
+  (k l) bks 40 all-released ()
+)
+
+(defsrc
+  ` 1 2 3 4 5
+  tab q w e r t
+  caps a s d f g
+  lshift z x c v b
+
+  spc
+
+  6 7 8 9 0 min =
+  y u i o p [ ] \
+  h j k l ; ' ret
+  n m , . / rshift
+)
+
+(defvar
+  tap-timeout   200
+  hold-timeout  200
+  tt $tap-timeout
+  ht $hold-timeout
+)
+
+;;  Warning
+;;  The tap-hold action and all variants can behave unexpectedly
+;;  on Linux with respect to repeat of antecedent key presses.
+;;  The full context is in discussion #422:
+;;  https://github.com/jtroo/kanata/discussions/422
+;;  In brief, the workaround
+;;  is to use tap-hold inside of multi, combined with another key
+;;  action that behaves as a no-op like f24.
+;;  Example: (multi f24 (tap-hold …))
+
+(defalias
+;;f-meta (multi f24 (tap-hold $tt $ht f lmet))
+;;d-alt (multi f24 (tap-hold $tt $ht d lalt))
+;;s-ctrl (multi f24 (tap-hold $tt $ht s lctrl))
+;;a-shift (multi f24 (tap-hold-press $tt $ht a lshift))
+;;j-meta (multi f24 (tap-hold $tt $ht j rmet))
+;;k-alt (multi f24 (tap-hold $tt $ht k ralt))
+;;l-ctrl (multi f24 (tap-hold $tt $ht l lctrl))
+;;;-shift (multi f24 (tap-hold-press $tt $ht ; rshift))
+f-meta (tap-hold $tt $ht f lmet)
+d-alt (tap-hold $tt $ht d lalt)
+s-ctrl (tap-hold $tt $ht s lctrl)
+a-shift (tap-hold-press $tt $ht a lshift)
+j-meta (tap-hold $tt $ht j rmet)
+k-alt (tap-hold $tt $ht k ralt)
+l-ctrl (tap-hold $tt $ht l lctrl)
+;-shift (tap-hold-press $tt $ht ; rshift)
+
+;;capctrl (multi f24 (tap-hold $tt $ht caps lctrl))
+capctrl (tap-hold $tt $ht caps lctrl)
+
+num (layer-toggle numsym)
+;;e (multi f24 (tap-hold $tt $ht e @num))
+;;i (multi f24 (tap-hold $tt $ht i @num))
+e (tap-hold $tt $ht e @num)
+i (tap-hold $tt $ht i @num)
+
+str (layer-toggle shiftedtoprow)
+;;w (multi f24 (tap-hold $tt $ht w @str))
+;;o (multi f24 (tap-hold $tt $ht o @str))
+w (tap-hold $tt $ht w @str)
+o (tap-hold $tt $ht o @str)
+
+arr (layer-toggle arrows)
+;;v (multi f24 (tap-hold $tt $ht v @arr))
+;;n (multi f24 (tap-hold $tt $ht n @arr))
+v (tap-hold $tt $ht v @arr)
+n (tap-hold $tt $ht n @arr)
+)
+
+(deflayer main
+  ` 1 2 3 4 5
+  tab q @w @e r t
+  @capctrl @a-shift @s-ctrl @d-alt @f-meta g
+  lshift z x c @v b
+
+  spc
+
+  6 7 8 9 0 min =
+  y u @i @o p [ ] \
+  h @j-meta @k-alt @l-ctrl @;-shift ' ret
+  @n m , . / rshift
+)
+
+(deflayer numsym
+  ` 1 2 3 4 5
+  tab S-1 S-8 min + S-\
+  S-; = S-[ [ S-9 S-min
+  lshift \ S-] ] S-0 S-;
+
+  0
+
+  6 7 8 9 0 min =
+  S-4 7 8 9 S-8 / ] \
+  5 4 5 6 + - ret
+  = 1 2 3 / rshift
+)
+
+(deflayer shiftedtoprow
+  ` 1 2 3 4 5
+  tab q w e r t
+  S-` S-1 S-2 S-3 S-4 S-5
+  lshift z x c v b
+
+  spc
+
+  6 7 8 9 0 min =
+  y u i o p [ ] \
+  S-6 S-7 S-8 S-9 S-0 S-min S-=
+  n m , . / rshift
+)
+
+(deflayer arrows
+  ` 1 2 3 4 5
+  tab q w e r t
+  @capctrl a s d f g
+  lshift z x c v b
+
+  spc
+
+  6 7 8 9 C-0 C-min C-=
+  y u i o p [ ] \
+  left down up right ; ' ret
+  n m , . / rshift
+)

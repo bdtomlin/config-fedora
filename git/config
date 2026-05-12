@@ -1,0 +1,73 @@
+[user]
+	name = Bryan Tomlin
+	email = bryan@tomlin.email
+
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+[core]
+  excludesfile = ~/.config/git/gitignore
+  editor = nvim
+  pager = delta
+[interactive]
+  diffFilter = delta --color-only --features=interactive
+[delta]
+  ; features = decorations
+  side-by-side = true
+  line-numbers = true
+[delta "interactive"]
+    keep-plus-minus-markers = false
+[delta "decorations"]
+    commit-decoration-style = blue ol
+    commit-style = raw
+    file-style = omit
+    hunk-header-decoration-style = blue box
+    hunk-header-file-style = red
+    hunk-header-line-number-style = "#067a00"
+    hunk-header-style = file line-number syntax
+[alias]
+  c = commit -m
+  a = add
+  di = diff
+  dic = diff --cached
+  pl = pull
+  ps = push
+  plre = pull --rebase
+  st = status
+  out = log origin..HEAD
+  co = checkout
+	sla = log --oneline --decorate --graph --all
+	glog = log -E -i --grep
+[push]
+	default = simple
+
+; [diff]
+; 	tool = difftastic
+;   external = difft
+; [difftool]
+; 	prompt = false
+; [difftool "difftastic"]
+;   cmd = difft "$LOCAL" "$REMOTE"
+; [pager]
+; 	difftool = true
+
+[mergetool "nvim"]
+	cmd = nvim -f -c \"Gdiffsplit!\" \"$MERGED\"
+
+# If you want to set up nvim as the default merge tool,
+# then also set the following variables:
+[mergetool]
+	prompt = false
+[merge]
+	tool = nvim
+
+[init]
+	defaultBranch = main
+[pull]
+	rebase = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

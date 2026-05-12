@@ -1,0 +1,52 @@
+[mgr]
+show_hidden = false
+
+[opener]
+play = [
+	{ run = 'mpv "$@"', orphan = true, for = "unix" }
+]
+edit = [
+	{ run = 'nvim "$@"', block = true, for = "unix" }
+]
+neovim = [
+	{ run = 'nvim "$@"', block = true, for = "unix" }
+]
+open = [
+	{ run = 'xdg-open "$@"', orphan = true, desc = "Open" }
+]
+reveal = [
+  { run = 'nautilus -w "$@"', orphan = true, desc = "Reveal", for = "linux"}
+]
+libreoffice = [
+    { run = 'libreoffice "$@"', desc = "LibreOffice", orphan = true, for = "unix" }
+]
+firefox = [
+    { run = 'firefox "$@"', desc = "Firefox Browser", orphan = true, for = "unix" }
+]
+
+[open]
+prepend_rules = [
+    { url = "*.csv", use = [ "neovim", "libreoffice", "reveal" ] },
+    { url = "*.html", use = [ "neovim", "firefox", "reveal" ] }
+]
+
+[preview]
+# Max width/height for pre-caching (the resolution Yazi generates)
+# max_width  = 3000
+# max_height = 3000
+preview_protocol = "kitty"
+
+[tasks]
+# Max dimension allowed to be decoded at all (prevents RAM spikes)
+# The default is often 10,000. Max value is 65535.
+image_bound = [10000, 10000]
+
+[[plugin.prepend_fetchers]]
+url   = "*"
+run   = "git"
+group = "git"
+
+[[plugin.prepend_fetchers]]
+url   = "*/"
+run   = "git"
+group = "git"

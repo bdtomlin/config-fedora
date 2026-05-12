@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+# if new is passed in, launch a new terminal with a separate tmux session
+
+if [[ $* =~ "new" ]]; then
+  ghostty --title="AltDBUI-$(date +'T%I:%M:%S%p')" -e nvim -c DBUI
+  exit 0
+fi
+
+WINDOW_ID=$(niri msg -j windows | jq -r ".[] | select(.app_id == \"com.dbui.main\") | .id" | head -n 1)
+if niri msg windows | rg "com.dbui.main"; then
+    niri msg action focus-window --id "$WINDOW_ID"
+else
+    ghostty --class=com.dbui.main --title=DBUI -e nvim -c DBUI
+fi

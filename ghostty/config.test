@@ -1,0 +1,61 @@
+# gtk-tabs-location = hidden
+gtk-tabs-location = top
+# keybind = ctrl+space>t=new_tab
+# keybind = ctrl+space>l=new_split:right
+# keybind = ctrl+space>h=new_split:left
+# keybind = ctrl+space>j=new_split:down
+# keybind = ctrl+space>k=new_split:up
+# keybind = ctrl+tab=next_tab
+# keybind = ctrl+shift+tab=previous_tab
+# keybind = ctrl+w=close_tab
+# keybind = ctrl+q=quit
+#
+# keybind = alt+h=goto_split:left
+# keybind = alt+j=goto_split:bottom
+# keybind = alt+k=goto_split:top
+# keybind = alt+l=goto_split:right
+# window-decoration = false
+window-padding-x = 4
+adjust-cursor-thickness = 2
+resize-overlay = never
+
+font-family = JetBrainsMono Nerd Font
+font-size = 12
+adjust-cell-height = 2
+font-feature = -calt
+font-feature = -liga
+font-feature = -dlig
+
+# keybind = ctrl+tab=esc:[27;5;9~
+# keybind = ctrl+shift+tab=esc:[27;6;9~
+keybind = ctrl+0=reset_font_size
+
+background = 181616
+foreground = c5c9c5
+selection-background = 2D4F67
+selection-foreground = C8C093
+cursor-color = C8C093
+# normal
+palette = 0=#0d0c0c
+palette = 1=#c4746e
+palette = 2=#8a9a7b
+palette = 3=#c4b28a
+palette = 4=#8ba4b0
+palette = 5=#a292a3
+palette = 6=#8ea4a2
+palette = 7=#C8C093
+
+# bright
+palette = 8=#a6a69c
+palette = 9=#E46876
+palette = 10=#87a987
+palette = 11=#E6C384
+palette = 12=#7FB4CA
+palette = 13=#938AA9
+palette = 14=#7AA89F
+palette = 15=#c5c9c5
+
+
+# extended colors
+palette = 16=#b6927b
+palette = 17=#b98d7b

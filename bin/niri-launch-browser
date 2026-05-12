@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+# if new is passed in, launch a new browser
+if [[ $* =~ "new" ]]; then
+    firefox
+fi
+
+WINDOW_ID=$(niri msg -j windows | jq -r ".[] | select(.app_id == \"default-web-browser\") | .id" | head -n 1)
+if niri msg windows | rg "default-web-browser"; then
+    niri msg action focus-window --id "$WINDOW_ID"
+else
+  firefox --name default-web-browser 
+fi
+

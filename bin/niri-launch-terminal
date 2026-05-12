@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+# if new is passed in, launch a new terminal with a separate tmux session
+
+if [[ $* =~ "new" ]]; then
+  ghostty --title=AltTerm -e zellij --session "$(date +'%Y-%m-%dT%I:%M:%S%p')"
+  exit 0
+fi
+
+WINDOW_ID=$(niri msg -j windows | jq -r ".[] | select(.app_id == \"com.terminal.main\") | .id" | head -n 1)
+if niri msg windows | rg "com.terminal.main"; then
+    niri msg action focus-window --id "$WINDOW_ID"
+else
+    ghostty --class=com.terminal.main --title=MainTerm -e zellij
+fi
