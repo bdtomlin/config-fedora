@@ -10,6 +10,7 @@ alias yaegi='rlwrap yaegi'
 alias h=hyprland
 alias lg=lazygit
 alias hx=helix
+alias watts="awk '{print \$1*10^-6 \"W\"}' /sys/class/power_supply/BAT0/power_now"
 
     
 export BAT_THEME=1337

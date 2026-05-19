@@ -1,20 +1,29 @@
 #!/usr/bin/env bash
 
 #Programs
-sudo dnf install neovim
-sudo dnf install stow
-sudo dnf copr enable lihaohong/yazi
-sudo dnf install yazi
-sudo dnf install direnv
-sudo dnf install bat
-sudo dnf copr enable atim/starship
-sudo dnf install starship
-sudo dnf copr enable jdxcode/mise
-sudo dnf install mise
-sudo dnf copr enable peterwu/rendezvous
-sudo dnf install bibata-cursor-themes
-sudo dnf copr enable varlad/zellij 
-sudo dnf install zellij
+sudo dnf copr enable -y \
+  lihaohong/yazi \
+  atim/starship \
+  jdxcode/mise \
+  peterwu/rendezvous \
+  varlad/zellij  \
+
+sudo dnf install -y \
+  neovim \
+  stow \
+  yazi \
+  direnv \
+  bat \
+  starship \
+  mise \
+  bibata-cursor-themes \
+  zellij \
+  atuin \
+  git-delta \
+  powertop \
+  lsd
+
+flatpak install -y flathub io.github.realmazharhussain.GdmSettings
 
 # 1password
 sudo rpm --import https://downloads.1password.com/linux/keys/1password.asc
@@ -91,3 +100,6 @@ sudo chown -R kanata:kanata /etc/kanata
 sudo chmod 644 /etc/kanata/config.kbd
 sudo systemctl daemon-reload
 sudo systemctl enable --now kanata.service
+
+chsh -s $(which zsh)
+
