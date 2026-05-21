@@ -21,9 +21,13 @@ sudo dnf install -y \
   atuin \
   git-delta \
   powertop \
+  btop \
+  postgresql \
   lsd
 
-flatpak install -y flathub io.github.realmazharhussain.GdmSettings
+flatpak install -y flathub \
+  io.github.realmazharhussain.GdmSettings \
+  io.missioncenter.MissionCenter
 
 # 1password
 sudo rpm --import https://downloads.1password.com/linux/keys/1password.asc
