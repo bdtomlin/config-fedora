@@ -5,3 +5,4 @@
 # fi
 #
 export SYSTEMD_LOG_LEVEL=err
+. "$HOME/.cargo/env"
