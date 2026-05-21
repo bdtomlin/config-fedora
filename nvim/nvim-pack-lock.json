@@ -1,0 +1,28 @@
+{
+  "plugins": {
+    "alpha-nvim": {
+      "rev": "6c6a89d5b068b5251c8bdf0dd57bb921bcfeeb09",
+      "src": "https://github.com/goolord/alpha-nvim"
+    },
+    "kanagawa.nvim": {
+      "rev": "bb85e4bfc8d89b0e62c8fa53ccdd13d12e2f77b3",
+      "src": "https://github.com/rebelot/kanagawa.nvim"
+    },
+    "mini.icons": {
+      "rev": "520995f1d75da0e4cc901ee95080b1ff2bc46b94",
+      "src": "https://github.com/echasnovski/mini.icons"
+    },
+    "plenary.nvim": {
+      "rev": "74b06c6c75e4eeb3108ec01852001636d85a932b",
+      "src": "https://github.com/nvim-lua/plenary.nvim"
+    },
+    "which-key.nvim": {
+      "rev": "3aab2147e74890957785941f0c1ad87d0a44c15a",
+      "src": "https://github.com/folke/which-key.nvim"
+    },
+    "yazi.nvim": {
+      "rev": "ce56cb1534a4192eaf13a2f8fb2c1cdfc553e5f2",
+      "src": "https://github.com/mikavilpas/yazi.nvim"
+    }
+  }
+}
