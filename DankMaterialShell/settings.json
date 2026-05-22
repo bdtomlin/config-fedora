@@ -228,7 +228,7 @@
     "theme": "Bibata-Modern-Classic",
     "size": 24,
     "niri": {
-      "hideWhenTyping": false,
+      "hideWhenTyping": true,
       "hideAfterInactiveMs": 0
     },
     "hyprland": {
