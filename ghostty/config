@@ -1,8 +1,8 @@
 gtk-tabs-location = hidden
-gtk-titlebar = false
+# gtk-titlebar = false
 shell-integration-features = no-title
 shell-integration = detect
-window-decoration = none
+# window-decoration = none
 
 window-padding-x = 4
 adjust-cursor-thickness = 2

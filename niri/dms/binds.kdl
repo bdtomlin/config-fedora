@@ -18,7 +18,7 @@ binds {
 
     // Mod+Space hotkey-overlay-title="Run an Application: rofi" { spawn-sh "rofi -show drun"; }
     Mod+Space hotkey-overlay-title="Application Launcher" { spawn "dms" "ipc" "call" "spotlight" "toggle"; }
-    Mod+A hotkey-overlay-title="Open Activity: Btop" { spawn-sh "ghostty -e btop"; }
+    Mod+A hotkey-overlay-title="Open Activity: Btop" { spawn-sh "wezterm -e btop"; }
     Mod+Shift+A hotkey-overlay-title="Task Manager" { spawn "dms" "ipc" "call" "processlist" "focusOrToggle"; }
     Ctrl+Comma hotkey-overlay-title="Settings" { spawn "dms" "ipc" "call" "settings" "focusOrToggle"; }
     Mod+N hotkey-overlay-title="Notification Center" {
@@ -44,7 +44,7 @@ binds {
     // Mod+C hotkey-overlay-title="Pick Color Hex" { spawn-sh "dms color pick --autocopy"; }
     Mod+C hotkey-overlay-title="Color Picker" { spawn-sh " dms ipc call color-picker toggle"; }
     Mod+Shift+C hotkey-overlay-title="Pick Color Rgb" { spawn-sh "dms color pick --autocopy --rgb"; }
-    Super+E hotkey-overlay-title="Yazi" { spawn-sh "ghostty -e yazi"; }
+    Super+E hotkey-overlay-title="Yazi" { spawn-sh "wezterm -e yazi"; }
     Super+Shift+E hotkey-overlay-title="Nautilus FM" { spawn "nautilus"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.

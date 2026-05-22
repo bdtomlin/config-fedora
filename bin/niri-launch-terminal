@@ -2,14 +2,41 @@
 
 # if new is passed in, launch a new terminal with a separate tmux session
 
+# if [[ $* =~ "new" ]]; then
+#   ghostty --title=AltTerm -e zellij --session "$(date +'%Y-%m-%dT%I:%M:%S%p')"
+#   exit 0
+# fi
+#
+# WINDOW_ID=$(niri msg -j windows | jq -r ".[] | select(.app_id == \"com.terminal.main\") | .id" | head -n 1)
+# if niri msg windows | rg "com.terminal.main"; then
+#     niri msg action focus-window --id "$WINDOW_ID"
+# else
+#     ghostty --class=com.terminal.main --title=MainTerm -e zellij
+# fi
+
 if [[ $* =~ "new" ]]; then
-  ghostty --title=AltTerm -e zellij --session "$(date +'%Y-%m-%dT%I:%M:%S%p')"
+  SESSION_NAME="$(date +'%Y-%m-%dT%I:%M:%S%p')"
+
+  wezterm start --always-new-process \
+    --class=com.terminal.main \
+    -- zellij --session "$SESSION_NAME" &
+
+  sleep 0.2
+  wezterm cli set-window-title "AltTerm"
+
   exit 0
 fi
 
-WINDOW_ID=$(niri msg -j windows | jq -r ".[] | select(.app_id == \"com.terminal.main\") | .id" | head -n 1)
-if niri msg windows | rg "com.terminal.main"; then
-    niri msg action focus-window --id "$WINDOW_ID"
+# Check if MainTerm window already exists
+if niri msg windows | rg -q "com.terminal.main"; then
+  WINDOW_ID=$(niri msg -j windows | jq -r '.[] | select(.app_id == "com.terminal.main") | .id' | head -n 1)
+  niri msg action focus-window --id "$WINDOW_ID"
 else
-    ghostty --class=com.terminal.main --title=MainTerm -e zellij
+  # Launch new MainTerm instance
+  wezterm start --always-new-process \
+    --class=com.terminal.main \
+    -- zellij &
+
+  sleep 0.2
+  wezterm cli set-window-title "MainTerm"
 fi

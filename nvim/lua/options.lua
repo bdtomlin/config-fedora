@@ -2,6 +2,13 @@ vim.opt.nu = true
 vim.opt.relativenumber = true
 vim.opt.confirm = true
 
+-- trackpad support
+vim.opt.mouse = "a"
+vim.opt.wrap = false
+vim.opt.sidescroll = 1
+vim.opt.sidescrolloff = 10
+vim.opt.mousescroll = "ver:3,hor:6" -- tweak horizontal sensitivity
+
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2
@@ -52,4 +59,3 @@ vim.opt.laststatus = 2 -- every window gets it's own status bar
 vim.o.stl = " %f %m %=%y[%L] %l,%c "
 vim.g.loaded_netrwPlugin = 1
 vim.g.loaded_netrw = 1
-  

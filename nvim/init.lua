@@ -10,7 +10,6 @@ vim.pack.add({
   "https://github.com/nvim-lua/plenary.nvim",
 })
 require("alpha").setup(require("alpha-theme").config)
-vim.keymap.set("n", "<leader>a", "<cmd>Alpha<cr>")
 -- end This must be at the VERY TOP of init.lua
 
 require("options")
