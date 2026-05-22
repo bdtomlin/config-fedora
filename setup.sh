@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
 #Programs
-sudo dnf copr enable -y \
-  lihaohong/yazi \
-  atim/starship \
-  jdxcode/mise \
-  peterwu/rendezvous \
-  varlad/zellij  \
+sudo dnf copr enable -y lihaohong/yazi
+sudo dnf copr enable -y atim/starship
+sudo dnf copr enable -y peterwu/rendezvous
+sudo dnf copr enable -y varlad/zellij
+sudo dnf copr enable -y atim/lazygit
+sudo dnf copr enable -y jdxcode/mise
 
 sudo dnf install -y \
   neovim \
@@ -23,6 +23,7 @@ sudo dnf install -y \
   powertop \
   btop \
   postgresql \
+  lazygit \
   lsd
 
 flatpak install -y flathub \
@@ -105,5 +106,6 @@ sudo chmod 644 /etc/kanata/config.kbd
 sudo systemctl daemon-reload
 sudo systemctl enable --now kanata.service
 
-chsh -s $(which zsh)
+# change shell to zsh if not already
+[[ "$SHELL" == *"zsh"* ]] || chsh -s "$(which zsh)"
 

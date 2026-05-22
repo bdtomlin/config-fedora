@@ -10,3 +10,8 @@ convert to xe driver
 `sudo grubby --update-kernel=ALL --args="i915.force_probe=!7d55 xe.force_probe=7d55"`
 revert
 `sudo grubby --update-kernel=ALL --remove-args="i915.force_probe=!7d55 xe.force_probe=7d55"`
+
+for testing deep suspend more quickly
+`sudo grubby --update-kernel=ALL --args="mem_sleep_default=deep"`
+revert
+`sudo grubby --update-kernel=ALL --remove-args="mem_sleep_default=deep"`
