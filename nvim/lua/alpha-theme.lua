@@ -211,16 +211,16 @@ local config = {
   },
 }
 
-return config
--- return {
---   header = header,
---   buttons = buttons,
---   mru = mru,
---   config = config,
---   -- theme specific config
---   mru_opts = mru_opts,
---   leader = dashboard.leader,
---   file_icons = file_icons,
---   -- deprecated
---   nvim_web_devicons = file_icons,
--- }
+-- return config
+return {
+  header = header,
+  buttons = buttons,
+  mru = mru,
+  config = config,
+  -- theme specific config
+  mru_opts = mru_opts,
+  leader = dashboard.leader,
+  file_icons = file_icons,
+  -- deprecated
+  nvim_web_devicons = file_icons,
+}

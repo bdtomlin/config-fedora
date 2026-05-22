@@ -10,23 +10,8 @@
 -- vim.keymap.set("n", "<leader>dl", "<cmd>DiffviewLog<cr>", { desc = "Diffview Log", silent = true })
 -- vim.keymap.set("n", "<leader>do", "<cmd>DiffviewOpen<cr>", { desc = "Diffview Open", silent = true })
 
--- Telescope
--- local builtin = require("telescope.builtin")
--- vim.keymap.set("n", "<leader>l", "<cmd>Lazy<cr>", { desc = "Lazy.nvim", silent = true })
--- vim.keymap.set("n", "<leader><leader>", "<cmd>Telescope<cr>", { desc = "Telescope", silent = true })
--- vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Telescope find files", silent = true })
--- vim.keymap.set("n", "<leader>fc", builtin.commands, { desc = "Telescope commands", silent = true })
--- vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Telescope live grep", silent = true })
--- vim.keymap.set("n", "<leader>fG", builtin.git_files, { desc = "Telescope git files", silent = true })
--- vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Telescope buffers", silent = true })
--- vim.keymap.set("n", "<leader>.", builtin.buffers, { desc = "Telescope buffers", silent = true })
--- vim.keymap.set("n", "<leader>fh", builtin.command_history, { desc = "Telescope command history", silent = true })
--- vim.keymap.set("n", "<leader>fm", builtin.marks, { desc = "Telescope marks", silent = true })
--- vim.keymap.set("n", '<leader>f"', builtin.registers, { desc = "Telescope registers", silent = true })
--- vim.keymap.set("n", "<leader>gs", builtin.git_status, { desc = "Telescope git status", silent = true })
+vim.keymap.set("n", "<leader>l", "<cmd>Lazy<cr>", { desc = "Lazy.nvim", silent = true })
 
--- -- Alpha
--- vim.keymap.set("n", "<leader>a", "<cmd>Alpha<cr>")
 -- -- Oil.nvim
 -- -- vim.keymap.set("n", "<leader>e", "<cmd>Oil<cr>")
 -- vim.keymap.set("n", "<leader>e", "<cmd>Yazi<cr>")
@@ -40,12 +25,6 @@
 -- vim.keymap.set("n", "<esc>", "<cmd>noh<cr>")
 --
 -- local bufdelete = require("btomlin.bufdelete")
-
--- -- Navigator.nvim
--- vim.keymap.set({ "n", "t" }, "<C-h>", "<cmd>ZellijNavigateLeftTab<cr>")
--- vim.keymap.set({ "n", "t" }, "<C-j>", "<cmd>ZellijNavigateDown<cr>")
--- vim.keymap.set({ "n", "t" }, "<C-k>", "<cmd>ZellijNavigateUp<cr>")
--- vim.keymap.set({ "n", "t" }, "<C-l>", "<cmd>ZellijNavigateRightTab<cr>")
 
 -- horizontal scroll
 vim.keymap.set({ "n", "t" }, "zh", "30zh")
