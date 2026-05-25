@@ -1,5 +1,9 @@
 {
   "plugins": {
+    "CopilotChat.nvim": {
+      "rev": "137d3bc527518f5ea982c43c43084496732365c3",
+      "src": "https://github.com/CopilotC-Nvim/CopilotChat.nvim"
+    },
     "alpha-nvim": {
       "rev": "6c6a89d5b068b5251c8bdf0dd57bb921bcfeeb09",
       "src": "https://github.com/goolord/alpha-nvim"
