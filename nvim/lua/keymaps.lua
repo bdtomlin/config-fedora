@@ -15,7 +15,6 @@ vim.keymap.set("n", "<leader>l", "<cmd>Lazy<cr>", { desc = "Lazy.nvim", silent =
 
 -- -- Turn of search highlight
 vim.keymap.set("n", "<esc>", "<cmd>noh<cr>")
--- local bufdelete = require("btomlin.bufdelete")
 
 -- horizontal scroll
 vim.keymap.set({ "n", "t" }, "zh", "30zh")

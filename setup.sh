@@ -40,7 +40,8 @@ flatpak install -y flathub \
   io.github.realmazharhussain.GdmSettings \
   io.missioncenter.MissionCenter \
   it.mijorus.gearlever \
-  io.github.getnf.embellish
+  io.github.getnf.embellish \
+  flathub org.signal.Signal
 
 # Jetbrains Mono Font
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/JetBrainsMono.zip

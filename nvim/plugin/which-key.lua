@@ -1,19 +1,26 @@
 vim.pack.add({
-  "https://github.com/folke/which-key.nvim"
+  "https://github.com/folke/which-key.nvim",
 })
 
 local wk = require("which-key")
 
+local bufdelete = require("btomlin.bufdelete")
+
 wk.setup({})
 
 wk.add({
-  { "<leader>?", function() wk.show({ global = false }) end, desc = "Buffer Local Keymaps" },
+  {
+    "<leader>?",
+    function()
+      wk.show({ global = false })
+    end,
+    desc = "Buffer Local Keymaps",
+  },
 
   -- Example groups
   { "<leader>f", group = "file" },
   { "<leader>b", group = "buffer" },
 })
-
 
 wk.add({
   { "<leader>bn", "<cmd>bn<cr>", desc = "Buffer Next" },
@@ -37,4 +44,3 @@ wk.add({
   { "<leader>bn", "<cmd>bn<cr>", desc = "Buffer Next" },
   { "<leader>bp", "<cmd>bp<cr>", desc = "Buffer Previous" },
 })
-

@@ -21,6 +21,7 @@ require("mason-tool-installer").setup({
   ensure_installed = {
     -- lsps
     "gopls",
+    "rust-analyzer",
     -- "html",
     "templ",
     "emmet_ls",

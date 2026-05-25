@@ -8,9 +8,21 @@
       "rev": "bafd0368716216fa6a7bb2a43ecd889b44efdb46",
       "src": "https://github.com/m4xshen/autoclose.nvim"
     },
+    "blink.cmp": {
+      "rev": "82efc953a6121822fda1974241a4d1af74c6c026",
+      "src": "https://github.com/saghen/blink.cmp"
+    },
+    "blink.lib": {
+      "rev": "f29d8bac6549bc1e7d699c83f680823d7def98bd",
+      "src": "https://github.com/saghen/blink.lib"
+    },
     "conform.nvim": {
       "rev": "18aeab3d63d350dcf44d64c462cc489a3412af40",
       "src": "https://github.com/stevearc/conform.nvim"
+    },
+    "copilot.vim": {
+      "rev": "a12fd5672110c8aa7e3c8419e28c96943ca179be",
+      "src": "https://github.com/github/copilot.vim.git"
     },
     "diffview.nvim": {
       "rev": "4516612fe98ff56ae0415a259ff6361a89419b0a",
