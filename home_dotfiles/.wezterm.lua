@@ -38,4 +38,20 @@ config.keys = {
   },
 }
 
+config.mouse_bindings = {
+  -- Scroll up slower
+  {
+    event = { Down = { streak = 1, button = { WheelUp = 1 } } },
+    mods = "NONE",
+    action = act.ScrollByLine(-1), -- Change -1 to -2 or -3 if you want faster
+    alt_screen = false,
+  },
+  -- Scroll down slower
+  {
+    event = { Down = { streak = 1, button = { WheelDown = 1 } } },
+    mods = "NONE",
+    action = act.ScrollByLine(1), -- Change to 2 or 3 if you want faster
+    alt_screen = false,
+  },
+}
 return config
