@@ -8,13 +8,19 @@ vim.pack.add({
 vim.g.copilot_no_tab_map = true
 
 -- Map Ctrl+y to accept Copilot suggestion
-vim.keymap.set("i", "<C-y>", function()
-  return vim.fn["copilot#Accept"]("<CR>")
-end, {
-  expr = true,
-  silent = true,
-  desc = "Accept Copilot suggestion",
-})
+-- vim.keymap.set("i", "<C-a>", function()
+--   return vim.fn["copilot#Accept"]()
+-- end, {
+--   expr = true,
+--   silent = true,
+--   desc = "Accept Copilot suggestion",
+-- })
+
+vim.g.copilot_no_tab_map = true
+vim.api.nvim_set_keymap("i", "<C-a>", 'copilot#Accept("<CR>")', { expr = true, silent = true, noremap = true })
+vim.api.nvim_set_keymap("i", "<C-j>", "copilot#Next()", { expr = true, silent = true, noremap = true })
+vim.api.nvim_set_keymap("i", "<C-k>", "copilot#Previous()", { expr = true, silent = true, noremap = true })
+vim.api.nvim_set_keymap("i", "<C-x>", "copilot#Dismiss()", { expr = true, silent = true, noremap = true })
 
 vim.keymap.set({ "n", "v" }, "<leader>cc", "<cmd>CopilotChat<CR>", { desc = "Copilot Chat" })
 vim.keymap.set("n", "<leader>co", "<cmd>CopilotChatOpen<CR>", { desc = "Copilot Open" })
@@ -22,12 +28,12 @@ vim.keymap.set("n", "<leader>cx", "<cmd>CopilotChatClose<CR>", { desc = "Copilot
 vim.keymap.set("n", "<leader>ce", "<cmd>CopilotChatExplain<CR>", { desc = "Copilot Explain" })
 vim.keymap.set("n", "<leader>cr", "<cmd>CopilotChatReview<CR>", { desc = "Copilot Review" })
 
-require("CopilotChat").setup({
-  -- ... your existing configuration ...
-  mappings = {
-    accept_diff = {
-      normal = "<C-a>", -- Moves the diff action away from <C-y> in normal mode
-      insert = "<C-a>", -- Moves the diff action away from <C-y> in insert mode
-    },
-  },
-})
+-- require("CopilotChat").setup({
+--   -- ... your existing configuration ...
+--   mappings = {
+--     accept_diff = {
+--       normal = "<C-A>", -- Moves the diff action away from <C-y> in normal mode
+--       insert = "<C-A>", -- Moves the diff action away from <C-y> in insert mode
+--     },
+--   },
+-- })
