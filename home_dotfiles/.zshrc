@@ -1,7 +1,7 @@
 alias q='exit'
 alias :q='exit'
 alias gt='git log --oneline --graph --decorate --parents'
-alias cat='bat'
+# alias cat='bat'
 alias db='nvim -c "DBUI"'
 alias dbox='distrobox'
 alias nnvim='SKIP_LAZY_CHECK=1 nvim'
@@ -31,6 +31,8 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 export PATH="/usr/local/sbin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
+# for npm
+export PATH="$HOME/.npm-global/bin:$PATH"
 
 # allow local ./bin
 export PATH="./bin:$PATH"

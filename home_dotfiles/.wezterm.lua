@@ -32,9 +32,9 @@ config.keys = {
   },
   -- Optionally also disable Ctrl+Shift+Tab (previous tab)
   {
-    key = "Tab",
+    key = "phys:Tab",
     mods = "CTRL|SHIFT",
-    action = act.DisableDefaultAssignment,
+    action = act.SendString "\x1b[27;6;9~",
   },
 }
 

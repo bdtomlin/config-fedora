@@ -13,6 +13,8 @@ vim.keymap.set("n", "<leader>do", "<cmd>DiffviewOpen<cr>", { desc = "Diffview Op
 
 vim.keymap.set("n", "<leader>l", "<cmd>Lazy<cr>", { desc = "Lazy.nvim", silent = true })
 
+-- -- Escape terminal
+vim.keymap.set("t", "<C-j>", "<C-\\><C-n>")
 -- -- Turn of search highlight
 vim.keymap.set("n", "<esc>", "<cmd>noh<cr>")
 

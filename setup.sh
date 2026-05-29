@@ -43,6 +43,17 @@ flatpak install -y flathub \
   io.github.getnf.embellish \
   flathub org.signal.Signal
 
+# npm
+# Set npm's global directory to somewhere you own
+mkdir -p ~/.npm-global
+npm config set prefix '~/.npm-global'
+
+# Add it to your PATH (add this to ~/.bashrc or ~/.zshrc)
+echo 'export PATH="$HOME/.npm-global/bin:$PATH"' >>~/.bashrc
+source ~/.bashrc
+
+# Now install without sudo
+npm install -g @anthropic-ai/claude-code
 # Jetbrains Mono Font
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/JetBrainsMono.zip
 unzip JetBrainsMono.zip -d JetBrainsMono

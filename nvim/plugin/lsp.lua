@@ -26,10 +26,13 @@ require("mason-tool-installer").setup({
     "templ",
     "emmet_ls",
     "hyprls",
+    "just-lsp",
     -- formatters
     "stylua",
     "gofumpt",
     "biome",
+    -- dap
+    "codelldb",
   },
 })
 
