@@ -95,14 +95,14 @@ binds {
     Mod+S { screenshot; }
     Ctrl+Alt+Delete { quit; }
     Mod+Shift+X { quit; }
-    Mod+A hotkey-overlay-title="Open Activity: Btop" { spawn-sh "wezterm -e btop"; }
+    Mod+A hotkey-overlay-title="Open Activity: Btop" { spawn-sh "alacritty -e btop"; }
     Mod+B hotkey-overlay-title="Open Main Browser: Firefox" { spawn-sh "~/.config/bin/niri-launch-browser"; }
     Mod+D hotkey-overlay-title="Open a nvim DBUI in Ghostty" { spawn-sh "~/.config/bin/niri-launch-dbui"; }
     Mod+Shift+B hotkey-overlay-title="Open New Browser: Firefox" { spawn-sh "~/.config/bin/niri-launch-browser --new"; }
     Mod+Shift+D hotkey-overlay-title="Open new nvim DBUI in Ghostty" { spawn-sh "~/.config/bin/niri-launch-dbui --new"; }
     Mod+Shift+T hotkey-overlay-title="Open a NEW Terminal: Ghostty" { spawn-sh "~/.config/bin/niri-launch-terminal --new"; }
     Mod+T hotkey-overlay-title="Open a Terminal: Ghostty" { spawn-sh "~/.config/bin/niri-launch-terminal"; }
-    Super+E hotkey-overlay-title="Yazi" { spawn-sh "wezterm -e yazi"; }
+    Super+E hotkey-overlay-title="Yazi" { spawn-sh "alacritty -e yazi"; }
     Super+Shift+E hotkey-overlay-title="Nautilus FM" { spawn "nautilus"; }
     Super+Shift+W hotkey-overlay-title="Reload Waybar" { spawn-sh "pkill waybar; waybar"; }
     XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.025-"; }

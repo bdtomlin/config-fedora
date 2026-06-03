@@ -18,10 +18,6 @@ vim.keymap.set("t", "<C-j>", "<C-\\><C-n>")
 -- -- Turn of search highlight
 vim.keymap.set("n", "<esc>", "<cmd>noh<cr>")
 
--- horizontal scroll
-vim.keymap.set({ "n", "t" }, "zh", "30zh")
-vim.keymap.set({ "n", "t" }, "zl", "30zl")
-
 -- local function horizontal_scroll_mode(call_char)
 --   if vim.wo.wrap then
 --     return

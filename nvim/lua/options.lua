@@ -7,7 +7,6 @@ vim.opt.mouse = "a"
 vim.opt.wrap = false
 vim.opt.sidescroll = 1
 vim.opt.sidescrolloff = 10
-vim.opt.mousescroll = "ver:3,hor:6" -- tweak horizontal sensitivity
 
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2

@@ -32,6 +32,7 @@ sudo dnf install -y \
   lazygit \
   ghostty \
   wezterm \
+  alacritty \
   just \
   rbenv \
   lsd
@@ -143,3 +144,7 @@ sudo systemctl enable --now kanata.service
 
 # change shell to zsh if not already
 [[ "$SHELL" == *"zsh"* ]] || chsh -s "$(which zsh)"
+
+# fix browser video codecs
+sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-44.noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-44.noarch.rpm
+sudo dnf swap ffmpeg-free ffmpeg --allowerasing --enablerepo=rpmfusion-free-updates

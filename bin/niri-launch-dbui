@@ -2,40 +2,14 @@
 
 # if new is passed in, launch a new terminal with a separate tmux session
 
-# if [[ $* =~ "new" ]]; then
-#   ghostty --title="AltDBUI-$(date +'T%I:%M:%S%p')" -e nvim -c DBUI
-#   exit 0
-# fi
-#
-# WINDOW_ID=$(niri msg -j windows | jq -r ".[] | select(.app_id == \"com.dbui.main\") | .id" | head -n 1)
-# if niri msg windows | rg "com.dbui.main"; then
-#     niri msg action focus-window --id "$WINDOW_ID"
-# else
-#     ghostty --class=com.dbui.main --title=DBUI -e nvim -c DBUI
-# fi
-
 if [[ $* =~ "new" ]]; then
-  # Launch a new AltDBUI instance with timestamp
-  wezterm start --always-new-process \
-    --class=com.dbui.main \
-    -- nvim -c DBUI &
-
-  sleep 0.2
-  wezterm cli set-window-title "AltDBUI-$(date +'T%I:%M:%S%p')"
-
+  alacritty --title="AltDBUI-$(date +'T%I:%M:%S%p')" -e nvim -c DBUI
   exit 0
 fi
 
-# Check if DBUI window already exists
-if niri msg windows | rg -q "com.dbui.main"; then
-  WINDOW_ID=$(niri msg -j windows | jq -r '.[] | select(.app_id == "com.dbui.main") | .id' | head -n 1)
-  niri msg action focus-window --id "$WINDOW_ID"
+WINDOW_ID=$(niri msg -j windows | jq -r ".[] | select(.app_id == \"com.dbui.main\") | .id" | head -n 1)
+if niri msg windows | rg "com.dbui.main"; then
+    niri msg action focus-window --id "$WINDOW_ID"
 else
-  # Launch new DBUI instance
-  wezterm start --always-new-process \
-    --class=com.dbui.main \
-    -- nvim -c DBUI &
-
-  sleep 0.2
-  wezterm cli set-window-title "DBUI"
+    alacritty --class=com.dbui.main --title=DBUI -e nvim -c DBUI
 fi
