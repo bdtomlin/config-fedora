@@ -9,7 +9,6 @@ sudo dnf copr enable -y atim/lazygit
 sudo dnf copr enable -y jdxcode/mise
 sudo dnf copr enable -y jdxcode/mise
 sudo dnf copr enable -y scottames/ghostty
-sudo dnf copr enable wezfurlong/wezterm-nightly
 
 sudo dnf install -y \
   neovim \
@@ -31,7 +30,6 @@ sudo dnf install -y \
   postgresql-devel \
   lazygit \
   ghostty \
-  wezterm \
   alacritty \
   just \
   rbenv \
