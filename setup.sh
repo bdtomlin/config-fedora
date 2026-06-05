@@ -146,3 +146,8 @@ sudo systemctl enable --now kanata.service
 # fix browser video codecs
 sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-44.noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-44.noarch.rpm
 sudo dnf swap ffmpeg-free ffmpeg --allowerasing --enablerepo=rpmfusion-free-updates
+
+# start bluetooth early
+sudo mkdir -p /etc/dracut.conf.d
+echo 'add_dracutmodules+=" bluetooth "' | sudo tee /etc/dracut.conf.d/bluetooth.conf
+sudo dracut --regenerate-all --force
