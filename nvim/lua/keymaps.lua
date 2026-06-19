@@ -79,3 +79,9 @@ vim.keymap.set("v", "<leader>y", '"+y')
 vim.keymap.set("n", "<leader>Y", '"+Y')
 
 vim.keymap.set("n", "Q", "<nop>")
+
+vim.keymap.set("n", "<C-S-j>", "<cmd>resize -4<cr>")
+vim.keymap.set("n", "<C-S-k>", "<cmd>resize +4<cr>")
+vim.keymap.set("n", "<C-S-h>", "<cmd>vertical resize +4<cr>")
+vim.keymap.set("n", "<C-S-l>", "<cmd>vertical resize -4<cr>")
+vim.keymap.set("n", "<C-S-=>", "<cmd>wincmd =<cr>")

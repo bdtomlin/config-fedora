@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "deny": [
+      "Edit",
+      "Write"
+    ]
+  },
+  "model": "sonnet",
+  "theme": "dark",
+  "enabledPlugins": {
+    "rust-analyzer-lsp@claude-plugins-official": true
+  }
+}

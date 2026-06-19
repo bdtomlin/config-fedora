@@ -10,6 +10,10 @@ sudo dnf copr enable -y jdxcode/mise
 sudo dnf copr enable -y jdxcode/mise
 sudo dnf copr enable -y scottames/ghostty
 
+# ueberzug to get images in yazi in alacritty
+sudo dnf config-manager addrepo --from-repofile=https://download.opensuse.org/repositories/home:justkidding/Fedora_44/home:justkidding.repo
+sudo dnf install ueberzugpp
+
 sudo dnf install -y \
   neovim \
   stow \

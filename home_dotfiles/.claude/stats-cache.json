@@ -1,0 +1,95 @@
+{
+  "version": 2,
+  "lastComputedDate": "2026-06-10",
+  "dailyActivity": [
+    {
+      "date": "2026-05-28",
+      "messageCount": 36,
+      "sessionCount": 2,
+      "toolCallCount": 4
+    },
+    {
+      "date": "2026-05-29",
+      "messageCount": 106,
+      "sessionCount": 3,
+      "toolCallCount": 21
+    },
+    {
+      "date": "2026-06-09",
+      "messageCount": 35,
+      "sessionCount": 3,
+      "toolCallCount": 3
+    },
+    {
+      "date": "2026-06-10",
+      "messageCount": 59,
+      "sessionCount": 1,
+      "toolCallCount": 13
+    }
+  ],
+  "dailyModelTokens": [
+    {
+      "date": "2026-05-28",
+      "tokensByModel": {
+        "claude-sonnet-4-6": 814,
+        "claude-opus-4-6": 42
+      }
+    },
+    {
+      "date": "2026-05-29",
+      "tokensByModel": {
+        "claude-opus-4-6": 579
+      }
+    },
+    {
+      "date": "2026-06-09",
+      "tokensByModel": {
+        "claude-opus-4-6": 94
+      }
+    },
+    {
+      "date": "2026-06-10",
+      "tokensByModel": {
+        "claude-opus-4-6": 351
+      }
+    }
+  ],
+  "modelUsage": {
+    "claude-sonnet-4-6": {
+      "inputTokens": 6,
+      "outputTokens": 808,
+      "cacheReadInputTokens": 24118,
+      "cacheCreationInputTokens": 11470,
+      "webSearchRequests": 0,
+      "costUSD": 0,
+      "contextWindow": 0,
+      "maxOutputTokens": 0
+    },
+    "claude-opus-4-6": {
+      "inputTokens": 147,
+      "outputTokens": 919,
+      "cacheReadInputTokens": 1591789,
+      "cacheCreationInputTokens": 311120,
+      "webSearchRequests": 0,
+      "costUSD": 0,
+      "contextWindow": 0,
+      "maxOutputTokens": 0
+    }
+  },
+  "totalSessions": 9,
+  "totalMessages": 236,
+  "longestSession": {
+    "sessionId": "4e4afc9d-fd04-4e46-a3f9-e4f00134c95e",
+    "duration": 63996487,
+    "messageCount": 59,
+    "timestamp": "2026-06-10T22:24:27.503Z"
+  },
+  "firstSessionDate": "2026-05-28T16:25:42.048Z",
+  "hourCounts": {
+    "11": 2,
+    "12": 1,
+    "14": 5,
+    "17": 1
+  },
+  "totalSpeculationTimeSavedMs": 0
+}

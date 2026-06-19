@@ -1,7 +1,6 @@
 -- vim.pack.add({
 --   "https://github.com/github/copilot.vim.git",
 --   "https://github.com/nvim-lua/plenary.nvim",
---   "https://github.com/CopilotC-Nvim/CopilotChat.nvim",
 -- })
 --
 -- -- Disable default Tab mapping for Copilot
@@ -12,9 +11,3 @@
 -- vim.api.nvim_set_keymap("i", "<C-j>", "copilot#Next()", { expr = true, silent = true, noremap = true })
 -- vim.api.nvim_set_keymap("i", "<C-k>", "copilot#Previous()", { expr = true, silent = true, noremap = true })
 -- vim.api.nvim_set_keymap("i", "<C-x>", "copilot#Dismiss()", { expr = true, silent = true, noremap = true })
---
--- vim.keymap.set({ "n", "v" }, "<leader>cc", "<cmd>CopilotChat<CR>", { desc = "Copilot Chat" })
--- vim.keymap.set("n", "<leader>co", "<cmd>CopilotChatOpen<CR>", { desc = "Copilot Open" })
--- vim.keymap.set("n", "<leader>cx", "<cmd>CopilotChatClose<CR>", { desc = "Copilot Close" })
--- vim.keymap.set("n", "<leader>ce", "<cmd>CopilotChatExplain<CR>", { desc = "Copilot Explain" })
--- vim.keymap.set("n", "<leader>cr", "<cmd>CopilotChatReview<CR>", { desc = "Copilot Review" })
