@@ -1,2 +1,5 @@
 home_dotfiles/.claude/*
 !home_dotfiles/.claude/settings.json
+
+herdr/*
+!herdr/whatever

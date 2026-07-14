@@ -169,3 +169,9 @@ bindkey -M vicmd 'k' atuin-search-vicmd
 # zsh syntax highlighting (must be at end of file)
 zinit light zsh-users/zsh-syntax-highlighting
 
+
+# >>> grok installer >>>
+export PATH="$HOME/.grok/bin:$PATH"
+fpath=(~/.grok/completions/zsh $fpath)
+autoload -Uz compinit && compinit -C
+# <<< grok installer <<<

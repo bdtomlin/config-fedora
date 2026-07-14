@@ -1,14 +1,28 @@
 {
+  "enabledPlugins": {
+    "ruby-lsp@claude-plugins-official": true,
+    "rust-analyzer-lsp@claude-plugins-official": true
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "command": "bash '/home/bryan/.claude/hooks/herdr-agent-state.sh' session",
+            "timeout": 10,
+            "type": "command"
+          }
+        ],
+        "matcher": "*"
+      }
+    ]
+  },
+  "model": "sonnet",
   "permissions": {
     "deny": [
       "Edit",
       "Write"
     ]
-  },
-  "model": "sonnet",
-  "enabledPlugins": {
-    "rust-analyzer-lsp@claude-plugins-official": true,
-    "ruby-lsp@claude-plugins-official": true
   },
   "theme": "dark"
 }

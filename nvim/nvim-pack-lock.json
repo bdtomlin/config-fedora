@@ -148,6 +148,10 @@
       "rev": "07d20fce48a5629686aefb0a7cd4b25e33947d50",
       "src": "https://github.com/supermaven-inc/supermaven-nvim"
     },
+    "taskwarrior.nvim": {
+      "rev": "81e93d7ca72e859e54c11f6b292bc89a27f9b4c8",
+      "src": "https://github.com/MattHandzel/taskwarrior.nvim"
+    },
     "telescope.nvim": {
       "rev": "7d324792b7943e4aa16ad007212e6acc6f9fe335",
       "src": "https://github.com/nvim-telescope/telescope.nvim"
